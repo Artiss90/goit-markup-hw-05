@@ -28,6 +28,7 @@ html {
 *:hover,
 :focus {
   transition-duration: var(--transition-duration);
+  transition-timing-function: var(--function-of-time);
 }
 body {
   margin: 0;
