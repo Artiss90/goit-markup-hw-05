@@ -13,6 +13,8 @@
   --font-size-primary: 14px;
   --line-height-primary: 1.19;
   --letter-spacing-primary: 0.03em;
+  --function-of-time: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration: 250ms;
 }
 /* Прописуем глобальные распостраненные свойства */
 html {
@@ -22,6 +24,10 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+*:hover,
+:focus {
+  transition-duration: var(--transition-duration);
 }
 body {
   margin: 0;
