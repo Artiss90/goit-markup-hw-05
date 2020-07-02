@@ -194,10 +194,12 @@ a {
 .button-icon.icon-mail {
   width: 16px;
   height: 11.2px;
+  fill: var(--text-primary);
 }
 .button-icon.icon-phone {
   width: 10px;
   height: 15px;
+  fill: var(--text-primary);
 }
 .address-blok-header .icon {
   background-position: center;
@@ -205,14 +207,14 @@ a {
   height: 16px;
   width: 16px;
 }
-/* .address-blok-header .icon:hover,
+.address-blok-header .icon:hover,
 .address-blok-header .icon:focus {
-  --color5: var(--accent);
-} */
+  fill: var(--accent);
+}
 .site-header .item:hover,
 .site-header .item:focus {
   color: var(--accent);
-  --color5: var(--accent);
+  /* --color5: var(--accent); */
 }
 .site-header .address-list {
   display: flex;
@@ -434,11 +436,13 @@ a {
 .item-social .icon {
   width: 44px;
   height: 44px;
+  border-radius: 50px;
+  fill: var(--icone-color);
 }
 .item-social .icon:hover,
 .item-social .icon:focus {
-  --color4: var(--accent);
-  --color1: var(--background-primary);
+  background-color: var(--accent);
+  fill: var(--background-primary);
 }
 .section .name {
   font-weight: 500;
@@ -472,6 +476,7 @@ a {
   width: calc((100% - 150px) / 6);
   border: 1px solid var(--icone-color);
   border-radius: 4px;
+  fill: var(--icone-color);
 }
 .clients .button-icon {
   display: flex;
@@ -479,13 +484,16 @@ a {
   align-items: center;
   height: 90px;
   width: 170px;
-  /* border: 1px solid var(--icone-color);
-  border-radius: 4px; */
+  fill: inherit;
 }
+/* .clients .item:hover .clients .button-icon,
+.clients .item:focus .clients .button-icon {
+  fill: var(--accent);
+} */
 .clients .item:hover,
 .clients .item:focus {
   border-color: var(--accent);
-  --color1: var(--accent);
+  fill: var(--accent);
 }
 /* .clients .button-icon:hover,
 .clients .button-icon:focus {
@@ -552,8 +560,9 @@ a {
   width: calc(100% / 3);
 }
 .dark-icon {
-  --color4: rgba(255, 255, 255, 0.1);
-  --color1: var(--background-primary);
+  border-radius: 50px;
+  fill: var(--text-white);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .icon.send {
   width: 24px;
