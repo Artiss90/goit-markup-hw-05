@@ -27,8 +27,7 @@ html {
 }
 *:hover,
 :focus {
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--function-of-time);
+  transition: all var(--transition-duration) var(--function-of-time);
 }
 body {
   margin: 0;
@@ -650,10 +649,35 @@ a {
   border-left: 1px solid #eeeeee;
 }
 
-.section .pro {
+.overflow-img {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.pro.on-dark {
+  display: flex;
+  padding: 63px 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateY(105%);
+
+  width: 100%;
+  height: 100%;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+}
+.project .item:hover .pro.on-dark,
+.project .item:focus .pro.on-dark {
+  transform: translateY(0);
+  transition: transform var(--transition-duration) var(--function-of-time);
+}
+.project .item:hover,
+.project .item:focus {
+  box-sizing: border-box;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 .section .pro.on-dark {
   line-height: 1.56;
@@ -665,3 +689,9 @@ a {
   line-height: 1.87;
   color: var(--text-primary);
 }
+/* .pro {
+  display: inline-flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
