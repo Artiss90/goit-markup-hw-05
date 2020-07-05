@@ -671,6 +671,7 @@ a {
   left: 0;
 
   transform: translateY(105%);
+  transition: transform var(--transition-duration) var(--function-of-time);
 
   width: 100%;
   height: 100%;
